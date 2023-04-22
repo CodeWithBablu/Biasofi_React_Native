@@ -35,7 +35,7 @@ const WebViewScreen = ({ route, navigation }) => {
       URL: URL
     }
 
-    console.log("Hello");
+    console.log("Pressed bias button");
 
     const res = await fetch(`${modelUrl}`, {
       method: "POST",
@@ -101,7 +101,7 @@ const WebViewScreen = ({ route, navigation }) => {
             flexDirection: "row",
             alignItems: "center",
             width: "98%",
-            height: SPACING * 8,
+            height: SPACING * 7,
             backgroundColor: colors.black,
             borderRadius: SPACING,
           }}>
@@ -112,8 +112,8 @@ const WebViewScreen = ({ route, navigation }) => {
             }}>
 
               <Text style={[
-                { width: "100%", color: colors.gray[400], fontFamily: FONTS.bold, fontSize: SPACING * 2, paddingHorizontal: SPACING },
-                predictedVal == -1 && { fontSize: SPACING * 2.2 }
+                { width: "100%", textAlign: "center", color: colors.rose[300], fontFamily: FONTS.bold, fontSize: SPACING * 1.8, paddingHorizontal: SPACING },
+                predictedVal == -1 && { fontSize: SPACING * 2, color: colors.gray[400] }
 
               ]}>
 

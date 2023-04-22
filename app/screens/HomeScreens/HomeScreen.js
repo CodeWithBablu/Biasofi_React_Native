@@ -18,8 +18,10 @@ import Categories from "../../components/Categories";
 import { FONTS } from "../../config";
 const logo = require("../../../assets/logo.png")
 
-const { width } = Dimensions.get("window");
+const { width, height } = Dimensions.get("window");
 
+import categories from "../../config/categories";
+import ArticleCards from "../../components/ArticleCards";
 
 const HomeScreen = ({ navigation }) => {
 
@@ -27,8 +29,54 @@ const HomeScreen = ({ navigation }) => {
 
   // const User = useSelector(selectUserData);
 
-
+  const [headlines, setHeadLines] = useState(null);
+  const [articles, setArticles] = useState(null);
   const [activeCategoryId, setActiveCategoryId] = useState(0);
+
+  useEffect(() => {
+
+    fetchTopHeadlines();
+
+  }, []);
+
+  useEffect(() => {
+
+    fecthArticle();
+
+  }, [activeCategoryId]);
+
+
+  const fetchTopHeadlines = async () => {
+
+    const urlHeadlines = "https://newsapi.org/v2/top-headlines?country=in&apiKey=08040abef2854d009d3b4c62f7c26dee";
+
+    const res = await fetch(`${urlHeadlines}`, {
+      method: "GET",
+      mode: "cors",
+    });
+
+    var headlines = await (res.json()).then((res) => res.articles);
+
+    setHeadLines(headlines);
+
+  }
+
+  const fecthArticle = async () => {
+
+    const urlArticles = `${categories[activeCategoryId].url}`;
+
+    const res = await fetch(`${urlArticles}`, {
+      method: "GET",
+      mode: "cors",
+    });
+
+    var articles = await (res.json()).then((res) => res.articles);
+
+    // console.log(articles);
+    setArticles(articles);
+
+  }
+
 
 
   return (
@@ -136,16 +184,30 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </View>
 
-          <Text style={{ color: colors.amber[100], fontSize: SPACING * 2, fontFamily: FONTS.bold }}>Top headlines</Text>
+          <Text style={{ color: colors.amber[100], fontSize: SPACING * 2.2, fontFamily: FONTS.bold }}>Top headlines</Text>
 
-          <Text style={{ color: colors.rose[100], fontSize: SPACING * 2, fontFamily: FONTS.bold }}>Categories</Text>
+          <ArticleCards articles={headlines} horizontalAlign={true} />
+
+
+          <Text style={{ marginTop: SPACING * 2, color: colors.rose[100], fontSize: SPACING * 2.2, fontFamily: FONTS.blmelodyBold }}>Categories</Text>
 
           <Categories onChange={(id) => setActiveCategoryId(id)} />
 
           {/* show news article based on category */}
-          {
 
-          }
+          <ScrollView horizontal={true}
+            contentContainerStyle={{
+              width: "100%",
+              flexDirection: "column",
+              alignItems: "center"
+            }}
+          >
+
+            <ArticleCards articles={articles} horizontalAlign={false} />
+
+          </ScrollView>
+
+
 
         </ScrollView>
       </SafeAreaView >

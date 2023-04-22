@@ -3,44 +3,37 @@ const categories = [
   {
     id: 0,
     name: "Political",
-    q: null,
-    country: "in",
-    category: "politics",
+    url: "https://newsapi.org/v2/top-headlines?country=in&category=politics&apiKey=08040abef2854d009d3b4c62f7c26dee"
   },
   {
     id: 1,
     name: "Apple",
-    q: "apple",
-    country: null,
-    category: null,
+    url: "https://newsapi.org/v2/top-headlines?q=apple&apiKey=08040abef2854d009d3b4c62f7c26dee"
+
   },
   {
     id: 2,
     name: "Business",
-    q: null,
-    country: null,
-    category: "business",
+    url: "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=08040abef2854d009d3b4c62f7c26dee"
+
   },
   {
     id: 3,
     name: "Sport",
-    q: null,
-    country: "in",
-    category: "sports",
+    url: "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=08040abef2854d009d3b4c62f7c26dee"
+
   },
   {
     id: 4,
     name: "Technology",
-    q: null,
-    country: null,
-    category: "technology",
+    url: "https://newsapi.org/v2/top-headlines?category=technology&apiKey=08040abef2854d009d3b4c62f7c26dee"
+
   },
   {
     id: 5,
     name: "Tesla",
-    q: "tesla",
-    country: null,
-    category: null,
+    url: "https://newsapi.org/v2/top-headlines?q=tesla&apiKey=08040abef2854d009d3b4c62f7c26dee"
+
   },
 ];
 

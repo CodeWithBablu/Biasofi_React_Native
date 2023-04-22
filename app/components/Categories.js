@@ -36,28 +36,18 @@ const Categories = ({ onChange }) => {
           alignItems: "baseline",
           marginRight: SPACING * 3,
           borderRadius: SPACING * 1.2,
-          backgroundColor: colors.indigo[100],
+          backgroundColor: colors.amber[200],
         },
         activeCategoryId !== item.id && { backgroundColor: colors.dark, }
         ]}
           onPress={() => handlePress(item.id)}
         >
           <Text style={[
-            { color: colors.indigo[100], fontSize: SPACING * 1.6, paddingHorizontal: SPACING * 2, paddingVertical: SPACING, fontFamily: FONTS.bold },
+            { color: colors.amber[200], fontSize: SPACING * 1.6, paddingHorizontal: SPACING * 2, paddingVertical: SPACING, fontFamily: FONTS.bold },
             activeCategoryId === item.id && { color: colors.black, fontSize: SPACING * 1.8 }
           ]}>
             {item.name}
           </Text>
-          {/* {activeCategoryId === item.id && (
-            <View style={{
-              height: SPACING / 2,
-              width: SPACING * 4,
-              backgroundColor: colors.primary,
-              borderRadius: SPACING / 2,
-              marginTop: SPACING / 2,
-            }}
-            />
-          )} */}
         </TouchableOpacity>
       )}
     />
