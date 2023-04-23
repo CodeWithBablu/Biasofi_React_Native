@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "biasofi",
+    "name": "Biasofi",
     "slug": "biasofi",
+    "privacy":"public",
+    "description":"An News application having bias detecting features",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -36,14 +36,14 @@ const Categories = ({ onChange }) => {
           alignItems: "baseline",
           marginRight: SPACING * 3,
           borderRadius: SPACING * 1.2,
-          backgroundColor: colors.amber[200],
+          backgroundColor: colors.green[200],
         },
         activeCategoryId !== item.id && { backgroundColor: colors.dark, }
         ]}
           onPress={() => handlePress(item.id)}
         >
           <Text style={[
-            { color: colors.amber[200], fontSize: SPACING * 1.6, paddingHorizontal: SPACING * 2, paddingVertical: SPACING, fontFamily: FONTS.bold },
+            { color: colors.green[200], fontSize: SPACING * 1.6, paddingHorizontal: SPACING * 2, paddingVertical: SPACING, fontFamily: FONTS.bold },
             activeCategoryId === item.id && { color: colors.black, fontSize: SPACING * 1.8 }
           ]}>
             {item.name}

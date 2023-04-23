@@ -51,7 +51,7 @@ const Setting = ({ navigation }) => {
             // borderTopRightRadius: SPACING * 4,
             borderRadius: SPACING * 3,
             marginTop: SPACING * 10,
-            backgroundColor: colors.indigo[100],
+            backgroundColor: colors.zinc[800],
           }}>
 
             <TouchableOpacity style={{ marginTop: SPACING * 10, alignItems: "center", }}>
@@ -176,21 +176,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: colors.emerald[100],
+    backgroundColor: colors.zinc[900],
   },
   viewIonStyle: {
     alignItems: "center",
     justifyContent: "center"
   },
   IonStyle: {
-    textAlignVertical: "center", textAlign: "center", width: SPACING * 6, height: SPACING * 5.5, backgroundColor: colors.violet[400], borderRadius: SPACING * 1.5, marginLeft: SPACING / 2,
+    textAlignVertical: "center", textAlign: "center", width: SPACING * 6, height: SPACING * 5.5, borderRadius: SPACING * 1.5, marginLeft: SPACING / 2,
   },
   arrowIonStyle: {
-    textAlignVertical: "center", textAlign: "center", width: SPACING * 6.5, height: SPACING * 6.5, backgroundColor: colors.orange[100], borderTopRightRadius: SPACING * 2, borderBottomRightRadius: SPACING * 2,
+    textAlignVertical: "center", textAlign: "center", width: SPACING * 6.5, height: SPACING * 6.5, backgroundColor: colors.violet[50], borderTopRightRadius: SPACING * 2, borderBottomRightRadius: SPACING * 2,
   },
   textStyle: {
     width: SPACING * 20,
-    color: colors.dark,
+    color: colors.gray[400],
     fontFamily: FONTS.bold,
     fontSize: SPACING * 1.8,
   }

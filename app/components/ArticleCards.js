@@ -33,7 +33,7 @@ const ArticleCards = ({ articles, horizontalAlign }) => {
       },
       horizontalAlign === false && { marginLeft: SPACING * 0 }
       ]}
-      keyExtractor={(item) => item.publishedAt}
+      keyExtractor={(item) => item.title.concat(item.publishedAt)}
       renderItem={({ item }) => (
         <TouchableOpacity style={[{
           marginRight: SPACING * 4,

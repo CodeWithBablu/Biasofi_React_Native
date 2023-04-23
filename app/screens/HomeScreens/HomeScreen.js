@@ -184,10 +184,25 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </View>
 
+          <View style={{
+            width: "100%",
+            height: SPACING * 2,
+            borderTopRightRadius: SPACING * 2,
+            borderTopWidth: SPACING / 2,
+            borderColor: colors.coolGray[500],
+          }}></View>
+
           <Text style={{ color: colors.amber[100], fontSize: SPACING * 2.2, fontFamily: FONTS.bold }}>Top headlines</Text>
 
           <ArticleCards articles={headlines} horizontalAlign={true} />
 
+          <View style={{
+            width: "100%",
+            height: SPACING * 2,
+            borderTopRightRadius: SPACING * 2,
+            borderTopWidth: SPACING / 2,
+            borderColor: colors.coolGray[500],
+          }}></View>
 
           <Text style={{ marginTop: SPACING * 2, color: colors.rose[100], fontSize: SPACING * 2.2, fontFamily: FONTS.blmelodyBold }}>Categories</Text>
 
